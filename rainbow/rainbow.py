@@ -26,7 +26,7 @@ def header():
     return rx.flex(
         rx.color_mode.button(position="top-right"),  # Light/Dark Mode
         rx.image(src="/hello_lu.png", width="150px", height="150px"),
-        rx.heading("HELLO, I AM LUCILLE", size="2", padding_bottom="5px", padding_top="10px"),
+        rx.heading("HELLO, I AM ", size="2", padding_bottom="5px", padding_top="10px"),
         rx.text("A Creative and Visionary", size="6", text_align="center", font_weight="bold", padding_bottom="-5px"),
         rx.text("Product Owner", size="6", text_align="center", margin_top="-4px", font_weight="bold", padding_bottom="15px"),
         rx.box(
