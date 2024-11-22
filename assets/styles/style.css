@@ -1,0 +1,10 @@
+/* Global style for the entire website */
+a, a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
