@@ -18,7 +18,7 @@ def header() -> rx.Component:
                         radius="full",
                         border="1px solid #000000",
                         cursor="pointer",
-                        _hover={"opacity": 0.8},
+                        _hover={"opacity": 0.7},
                     ),
                     href="https://www.linkedin.com/in/lucillevigne/",
                 ),
@@ -30,7 +30,7 @@ def header() -> rx.Component:
                         stroke_width=1.2,
                         margin_top="50px",
                         _hover=rx.color_mode_cond(
-                            light={"color": "#333333", "opacity": 0.9}, # Light mode styles
+                            light={"color": "#000000", "opacity": 0.7}, # Light mode styles
                             dark={"color": "#ffffff", "opacity": 0.7}, # Dark mode styles
                         ),
                     ),
@@ -44,6 +44,6 @@ def header() -> rx.Component:
             direction="column",
             align="center",
             justify="center",
-            padding_top="150px", 
+            padding_top="160px", 
         ),
     ),
