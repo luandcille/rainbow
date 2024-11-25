@@ -11,6 +11,8 @@ def header() -> rx.Component:
             rx.text("A Creative and Visionary", size="6", text_align="center", font_weight="bold", padding_bottom="-5px"),
             rx.text("Product Owner", size="6", text_align="center", margin_top="-4px", font_weight="bold", padding_bottom="15px"),
             primary_button(
+                button_texts="HIRE ME",
+                link="",
                 ),
             rx.box(
                 rx.link(
