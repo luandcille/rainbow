@@ -1,5 +1,6 @@
 import reflex as rx
 from rxconfig import config
+from rainbow.components.buttons import primary_button
 
 def header() -> rx.Component:
     return rx.section(
@@ -9,26 +10,15 @@ def header() -> rx.Component:
             rx.heading("HELLO, I AM LUCILLE", size="2", paddinfg_bottom="5px", padding_top="10px", text_align="center", letter_spacing="0.5px"),
             rx.text("A Creative and Visionary", size="6", text_align="center", font_weight="bold", padding_bottom="-5px"),
             rx.text("Product Owner", size="6", text_align="center", margin_top="-4px", font_weight="bold", padding_bottom="15px"),
-            rx.box(
-                rx.link(
-                    rx.button(
-                        "HIRE ME",
-                        color="black",
-                        background_color="white",
-                        radius="full",
-                        border="1px solid #000000",
-                        cursor="pointer",
-                        _hover={"opacity": 0.7},
-                    ),
-                    href="https://www.linkedin.com/in/lucillevigne/",
+            primary_button(
                 ),
-            ),  
             rx.box(
                 rx.link(
                     rx.icon(
                         "circle-chevron-down",
                         stroke_width=1.2,
                         margin_top="50px",
+                        margin_bottom="100px",
                         _hover=rx.color_mode_cond(
                             light={"color": "#000000", "opacity": 0.7}, # Light mode styles
                             dark={"color": "#ffffff", "opacity": 0.7}, # Dark mode styles
@@ -44,6 +34,6 @@ def header() -> rx.Component:
             direction="column",
             align="center",
             justify="center",
-            padding_top="160px", 
+            padding_top="170px", 
         ),
     ),

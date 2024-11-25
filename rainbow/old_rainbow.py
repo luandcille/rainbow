@@ -96,7 +96,7 @@ def body_content():
                     _hover=rx.color_mode_cond(light={"opacity": 0.9, "color": "#333333"}, dark={"opacity": 0.7, "color": "#FFFFFF"},),),
                 
                 href="https://kwotes.fr/", 
-                text_decoration="none", 
+                text_decoration="none",
                 color="inherit",
             ),
             

@@ -1,23 +1,44 @@
 import reflex as rx
 from rxconfig import config
 
+from rainbow.components.projects import project_container
+
 def body() -> rx.Component:
-    return rx.section(
+    return rx.flex(
         rx.box( # Function of the anchor 
             id="body",
-            padding_top="90px",
+            padding_top="100px",
         ),
-        rx.container(
-            rx.image(src="/images/kwotes.png", width="100px", height="100px"),
-            rx.link(
-                rx.flex(
-                    rx.heading("kwotes app", size="8", text_align="center"),
-                    rx.icon("arrow-up-right", size=40),
-                    href="www.google.com",
-                ),  
-            ),
-            rx.button("Primary button"),
-            rx.button("Secondary"),
-            rx.text("There was a time"),
+        project_container(
+            logo_src="/images/la_zebrelle.png", 
+            title="la zébrelle", 
+            description="Kwotes offers a vast collection of inspiring quotes from diverse sources. Easily explore, save, and share your favorites, making daily motivation and insight just a tap away.", 
+            link="", 
+            button_texts=["Test"],
+        ),  
+        project_container(
+            logo_src="/images/la_zebrelle.png", 
+            title="la zébrelle", 
+            description="Kwotes offers a vast collection of inspiring quotes from diverse sources. Easily explore, save, and share your favorites, making daily motivation and insight just a tap away.", 
+            link="", 
+            button_texts=["Test"],
+        ),  
+        project_container(
+            logo_src="/images/la_zebrelle.png", 
+            title="la zébrelle", 
+            description="Kwotes offers a vast collection of inspiring quotes from diverse sources. Easily explore, save, and share your favorites, making daily motivation and insight just a tap away.", 
+            link="", 
+            button_texts=["Test"],
+        ),  
+        project_container(
+            logo_src="/images/la_zebrelle.png", 
+            title="la zébrelle", 
+            description="Kwotes offers a vast collection of inspiring quotes from diverse sources. Easily explore, save, and share your favorites, making daily motivation and insight just a tap away.", 
+            link="", 
+            button_texts=["Test"],
         ),
-    ),
+        width="100%",
+        direction="column",
+        align="center",
+        justify="center", 
+   ),          
