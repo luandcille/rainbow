@@ -5,7 +5,7 @@ from rainbow.components.buttons import primary_button
 def footer() -> rx.Component:
     return rx.flex(
         rx.container(
-            rx.heading("connect", size="8", padding_bottom="5px", margin_top="60px"),
+            rx.heading("connect", size="7", padding_bottom="5px", margin_top="40px", font_family="Didact Gothic", weight="medium"),
             rx.flex(
                 primary_button(
                 button_text="cv.read",
@@ -21,13 +21,13 @@ def footer() -> rx.Component:
                 ),
              width="380px",
              spacing="1",
+             padding_top="6px",
              padding_bottom="120px",
             ), 
             
             rx.flex(
-                rx.image(src="images/lucille_logo.png", width="50px", heigth="50px"),
-                rx.text("By Lucille Vigné", size="2"),
-                rx.text("Built with 🌈 & Reflex", size="2"),
+                rx.image(src="images/lucille_logo.png", width="50px", heigth="50px", padding_bottom="6px"),
+                rx.text("Made by Lucille Vigné", size="2", font_family="Didact Gothic", weight="regular"),
                 width="100%",
                 direction="column", 
                 align="center",  

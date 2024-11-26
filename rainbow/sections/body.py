@@ -12,7 +12,7 @@ def body() -> rx.Component:
         project_container(
             logo_src="/images/aesthetic.png", 
             title="aesthetic", 
-            description="aesthetic empowers you to customize your headings like never before, adding a unique touch to your digital space. Make your Notion titles pop!", 
+            description=" Make your Notion titles pop with that creative extension. Customize your headings like never before, adding a unique touch to your digital space", 
             link="https://www.aesthetics.so", 
             button_text_1=["founder"],
             button_text_2=["extension"],
@@ -20,7 +20,7 @@ def body() -> rx.Component:
         project_container(
             logo_src="/images/kwotes.png", 
             title="kwotes app", 
-            description="Kwotes offers a vast collection of inspiring quotes from diverse sources. Easily explore, save, and share your favorites, making daily motivation and insight just a tap away.", 
+            description="Kwotes offers a vast collection of inspiring quotes. Easily explore, save, and share your favorites, making daily motivation and insight just a tap away", 
             link="https://kwotes.fr",
             button_text_1=["co-founder"],
             button_text_2=["mobile app"],
@@ -29,7 +29,7 @@ def body() -> rx.Component:
         project_container(
             logo_src="/images/la_zebrelle.png", 
             title="la zébrelle", 
-            description="The Savannah is an educational platform that promotes awareness and celebrates the diversity of neurodiversity, fostering inclusion and understanding for all", 
+            description="The Savannah is an educational platform that promotes awareness, celebrates the diversity of neurodiversity, fostering inclusion and understanding for all", 
             link="https://lazebrelle.fr", 
             button_text_1=["founder"],
             button_text_2=["educational platform"],
@@ -38,7 +38,7 @@ def body() -> rx.Component:
         project_container(
             logo_src="/images/africa_vivre.png", 
             title="africa vivre", 
-            description="Embrace Africa's rich cultural diversity and support local artisans. Discover unique, handcrafted products made with passion and tradition.", 
+            description="Embrace Africa's rich cultural diversity and support local artisans. Discover unique, handcrafted products made with passion and tradition", 
             link="https://www.africavivre.com",
             button_text_1=["associate"],
             button_text_2=["marketplace"], 

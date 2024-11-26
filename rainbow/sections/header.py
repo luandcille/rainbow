@@ -1,16 +1,16 @@
 import reflex as rx
 from rxconfig import config
-from rainbow.components.buttons import primary_button
+from rainbow.components.buttons import primary_button, secondary_button
 
 def header() -> rx.Component:
     return rx.section(
         rx.flex(
             rx.color_mode.button(position="top-right"),  # Light/Dark Mode
-            rx.image(src="images/hello_lu.png", width="150px", height="150px"),
-            rx.heading("HELLO, I AM LUCILLE", size="2", paddinfg_bottom="5px", padding_top="10px", text_align="center", letter_spacing="0.2px", weight="light"),
-            rx.text("A Creative and Visionary", size="6", text_align="center", font_weight="bold", padding_bottom="-5px"),
-            rx.text("Product Owner", size="6", text_align="center", margin_top="-4px", font_weight="bold", padding_bottom="15px"),
-            primary_button(
+            rx.image(src="images/hello_lu.png", width="200px", height="200px"),
+            rx.heading("HELLO, I AM LUCILLE", size="4", font_family="Didact Gothic", weight="light", paddinfg_bottom="5px", padding_top="10px", text_align="center", letter_spacing="2px"),
+            rx.text("A Creative and Visionary", font_family="Didact Gothic", weight="bold", size="7", text_align="center", padding_bottom="-5px"),
+            rx.text("Product Owner", size="7", text_align="center", margin_top="-4px", font_family="Didact Gothic", weight="bold", padding_bottom="15px"),
+            secondary_button(
                 button_text="HIRE ME",
                 link="https://www.linkedin.com/in/lucillevigne",
                 ),
@@ -18,8 +18,8 @@ def header() -> rx.Component:
                 rx.link(
                     rx.icon(
                         "circle-chevron-down",
-                        stroke_width=1.2,
-                        margin_top="50px",
+                        stroke_width=1,
+                        margin_top="100px",
                         margin_bottom="100px",
                         _hover=rx.color_mode_cond(
                             light={"color": "#000000", "opacity": 0.7}, # Light mode styles
@@ -36,6 +36,6 @@ def header() -> rx.Component:
             direction="column",
             align="center",
             justify="center",
-            padding_top="170px", 
+            padding_top="100px", 
         ),
     ),

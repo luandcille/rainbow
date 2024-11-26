@@ -11,11 +11,11 @@ def project_container(
 ) -> rx.Component:
     return rx.flex(
         rx.container(
-                rx.image(src=logo_src, width="80px", height="80px"),
+                rx.image(src=logo_src, width="65px", height="65px", margin_bottom="10px"),
                 rx.link(
                     rx.flex(
-                        rx.heading(title, size="8", text_align="center"),
-                        rx.icon("arrow-up-right", size=35),
+                        rx.heading(title, size="8", text_align="center", margin_bottom="2px", font_family="Didact Gothic", weight="regular"),
+                        rx.icon("arrow-up-right", stroke_width=1.4, size=30, margin_bottom="2px"),
                         _hover=rx.color_mode_cond(
                             light={"opacity": 0.9,"color": "#333333"}, 
                             dark={"opacity": 0.7, "color": "#FFFFFF"},
@@ -26,12 +26,13 @@ def project_container(
                     color="inherit",
                 ),
                 rx.flex(
-                    rx.button(button_text_1, radius="full", color="black", background_color="white", border="1px solid #000000", size="1", padding_left="10px", padding_right="10px", margin_top="5px", margin_bottom="5px"),
-                    rx.button(button_text_2, radius="full", color="black", background_color="white", border="1px solid #000000", size="1", padding_left="10px", padding_right="10px", margin_top="5px", margin_bottom="5px"),
+                    rx.button(button_text_1, font_family="Didact Gothic", font_weight="600", radius="full", color="black", background_color="white", border="1px solid #000000", size="1", padding_left="10px", padding_right="10px", margin_top="5px", margin_bottom="5px"),
+                    rx.button(button_text_2, font_family="Didact Gothic", font_weight="600", radius="full", color="black", background_color="white", border="1px solid #000000", size="1", padding_left="10px", padding_right="10px", margin_top="5px", margin_bottom="5px"),
                     spacing="1",
                 ),
-                rx.text(description),
+                rx.text(description, size="4", font_family="Didact Gothic", weight="regular", margin_top="3px"),
             width="400px",
         ),
         padding_top="10px",
+        padding_bottom="50px",
     ),
