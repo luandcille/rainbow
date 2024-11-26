@@ -2,7 +2,6 @@ import reflex as rx
 from rainbow.components.icons import get_icon
 from rainbow.components.hint import hint
 
-
 @rx.memo
 def badge() -> rx.Component:
     return hint(
