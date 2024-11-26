@@ -243,7 +243,7 @@ def body_content():
 def button_with_icon_after_text():
     return rx.flex(
         rx.container( 
-            rx.heading("Connect", size="7"),
+            rx.heading("Connect", size="8"),
             rx.flex(
                 rx.link(
                     rx.button(
