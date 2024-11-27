@@ -6,7 +6,6 @@ from rainbow.sections.body import body
 from rainbow.sections.footer import footer
 from rainbow.components.badge import badge
 
-
 app = rx.App(
     stylesheets = 
         ["styles/style.css", 
@@ -20,6 +19,13 @@ def index() -> rx.Component:
         body(),
         footer(),
         badge(),
-        # class_name="flex flex-col w-full max-w-[94.5rem] justify-center items-center mx-auto px-4 lg:px-5 relative overflow-hidden",
-   ),
+        class_name="rainbow-border",
+        style={
+            "backgroundColor": rx.color_mode_cond(
+                light="#FDFCFC",  # Light mode background color
+                dark="#1A1A1A",   # Dark mode background color
+            )
+        },
+),
+    
 app.add_page(index)

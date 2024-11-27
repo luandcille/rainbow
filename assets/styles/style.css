@@ -1,4 +1,22 @@
 /* Smooth scrolling */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+
+/* styles/style.css */
+.rainbow-border {
+  border: 5px solid transparent; /* Ajustez la largeur de la bordure si nécessaire */
+  border-image: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  ) 1;
+  border-radius: 15px; /* Coins arrondis (facultatif) */
+  padding: 20px; /* Espace intérieur */
+}
+
