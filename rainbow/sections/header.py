@@ -7,7 +7,7 @@ def header() -> rx.Component:
         rx.flex(
             rx.color_mode.button(position="top-right"),  # Light/Dark Mode
             rx.image(src="images/hello_lu.png", width="200px", height="200px"),
-            rx.heading("HELLO, I AM LUCILLE", size="4", font_family="Didact Gothic", weight="light", paddinfg_bottom="5px", padding_top="10px", text_align="center", letter_spacing="2px"),
+            rx.heading("HELLO, I AM LUCILLE", size="4", font_family="Didact Gothic", weight="light", padding_bottom="5px", padding_top="10px", text_align="center", letter_spacing="2px"),
             rx.text("A Creative and Visionary", font_family="Didact Gothic", weight="bold", size="7", text_align="center", padding_bottom="-5px"),
             rx.text("Product Owner", size="7", text_align="center", margin_top="-4px", font_family="Didact Gothic", weight="bold", padding_bottom="15px"),
             secondary_button(
