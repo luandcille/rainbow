@@ -5,14 +5,17 @@ from rainbow.sections.header import header
 from rainbow.sections.body import body
 from rainbow.sections.footer import footer
 from rainbow.components.badge import badge
+from rainbow.components.meta import meta_tags, favicons_links
 
 app = rx.App(
     stylesheets = 
-        ["styles/style.css", 
+        ["fashion/main.css", 
          "https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap"
         ], 
+    head_components=favicons_links()
 )
 
+@rx.page(route="/", title="Lucille Vigné · Beneath the Rainbow Sky", meta=meta_tags)
 def index() -> rx.Component:
     return rx.container(
         header(),
@@ -27,5 +30,4 @@ def index() -> rx.Component:
             )
         },
 ),
-    
 app.add_page(index)
