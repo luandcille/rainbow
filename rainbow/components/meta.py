@@ -15,6 +15,7 @@ meta_tags = [
 
 def favicons_links() -> list[rx.Component]:
     return [
-        rx.el.link(rel="icon", type="image/png", sizes="32x32", href="images/lucille_logo_32.png"),
         rx.el.link(rel="icon", type="image/png", sizes="16x16", href="images/lucille_logo_16.png"),
+        # rx.el.link(rel="icon", type="image/png", sizes="32x32", href="images/lucille_logo_32.png"),
+        
     ]

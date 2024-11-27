@@ -15,7 +15,13 @@ app = rx.App(
     head_components=favicons_links()
 )
 
-@rx.page(route="/", title="Lucille Vigné · Beneath the Rainbow Sky", meta=meta_tags)
+# @rx.page(route="/", title="Lucille Vigné · Beneath the Rainbow Sky", meta=meta_tags)
+@rx.page(
+    title="Lucille Vigné · Beneath the Rainbow Sky",
+    description="A creative and visionary space where ideas shine as brightly as rainbows, inspiring imagination and limitless possibilities.",
+    image="images/lucille_logo_32.png",
+    meta=meta_tags,
+)
 def index() -> rx.Component:
     return rx.container(
         header(),
