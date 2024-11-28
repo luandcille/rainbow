@@ -33,7 +33,7 @@ def secondary_button(
             font_family="Didact Gothic",
             size="3",
             color="black",
-            weigth="regular",
+            weight="regular",
             background_color="white",
             radius="full",
             border="1px solid #000000",

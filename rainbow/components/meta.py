@@ -11,11 +11,14 @@ meta_tags = [
         "name": "description",
         "content": "Beneath the Rainbow Sky",
     },
+    
+     # Show preview 
+    {"property": "og:url", "content": "https://lucillevigne.com"},
+    {"property": "og:type", "content": "website"},
+    {"property": "og:title", "content": "Lucille Vigné · Beneath the Rainbow Sky"},
+    {
+        "property": "og:description",
+        "content": "A creative and visionary space where ideas shine as brightly as rainbows, inspiring imagination and limitless possibilities.",
+    },
+    {"property": "og:image", "content": "/previews/lucille_vigne_rainbow.png"},
 ]
-
-def favicons_links() -> list[rx.Component]:
-    return [
-        rx.el.link(rel="icon", type="image/png", sizes="16x16", href="images/lucille_logo_16.png"),
-        # rx.el.link(rel="icon", type="image/png", sizes="32x32", href="images/lucille_logo_32.png"),
-        
-    ]

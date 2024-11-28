@@ -8,7 +8,7 @@ html {
   border: 5px solid transparent; /* Ajustez la largeur de la bordure si nécessaire */
   border-image: linear-gradient(
     90deg,
-    red,
+    rgb(235, 63, 63),
     orange,
     yellow,
     green,
