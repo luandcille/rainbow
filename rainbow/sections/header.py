@@ -12,7 +12,7 @@ def header() -> rx.Component:
             rx.text("Product Owner", size="7", text_align="center", margin_top="-4px", font_family="Didact Gothic", weight="bold", padding_bottom="15px"),
             secondary_button(
                 button_text="HIRE ME",
-                link="https://www.linkedin.com/in/lucillevigne",
+                link="https://www.linkedin.com/in/lucillevigne", 
                 ),
             rx.box(
                 rx.link(

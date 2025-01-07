@@ -22,6 +22,7 @@ def project_container(
                         ),
                     ),
                     href=link, 
+                    is_external=True,
                     text_decoration="none",
                     color="inherit",
                 ),

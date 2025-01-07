@@ -24,6 +24,7 @@ def badge() -> rx.Component:
                 dark="fixed bottom-6 right-6 flex flex-row gap-1.5 items-center w-auto rounded-lg bg-[#151618] shadow-small p-1.5 transition-bg border border-solid border-[#27282B] z-[9998] cursor-pointer",
             ),
             href="https://github.com/reflex-dev/reflex-web",
+            is_external=True
         ),
         align="start",
     )

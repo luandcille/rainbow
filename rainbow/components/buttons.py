@@ -21,6 +21,7 @@ def primary_button(
             padding_right="10px",
         ),
         href=link,
+        is_external=True
     ),
     
 def secondary_button(
@@ -43,4 +44,5 @@ def secondary_button(
             padding_right="20px",
         ),
         href=link,
+        is_external=True
     ),
