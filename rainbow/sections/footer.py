@@ -27,7 +27,7 @@ def footer() -> rx.Component:
             
             rx.flex(
                 rx.image(src="images/lucille_logo.png", width="50px", height="50px", margin_bottom="5px"),
-                rx.text("Made by Lucille Vigné", size="2", font_family="Didact Gothic", weight="regular"),
+                rx.text("Coded by Lucille Vigné", size="2", font_family="Didact Gothic", weight="regular"),
                 rx.text("with rbnws 🌈", size="2", font_family="Didact Gothic", weight="regular"),
                 width="100%",
                 direction="column", 
