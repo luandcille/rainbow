@@ -20,11 +20,11 @@ def badge() -> rx.Component:
     return rx.el.div(
         rx.link(
             rx.el.div(
-                get_icon("badge_logo"),
-                # rx.el.img(
-                #     src="/images/lucille_logo.png",
-                #     class_name="h-4 w-4 sm:h-6 sm:w-6",
-                # ),
+            rx.el.img(
+                src="/images/reflex_logo.jpg",
+                class_name="h-3 w-3 sm:h-4 sm:w-4 rounded-sm object-contain",
+            ),
+
                 rx.el.span(
                     "Built with Reflex",
                     class_name="ml-[4px] sm:ml-[6px] font-semibold text-xs sm:text-sm whitespace-nowrap",
