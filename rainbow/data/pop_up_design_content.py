@@ -1,4 +1,6 @@
-# ℹ️ popup_content.py
+# ------------------------------------
+# ℹ️ POP UP DESIGN CONTENT
+# ------------------------------------
 # This file defines structured content for each pop-up design.
 # Each key ("squadra", "humans", "mickey") corresponds to a design project,
 # and includes intro, images, highlights, carousel, and quote.
