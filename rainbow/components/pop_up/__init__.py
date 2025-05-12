@@ -1,0 +1,3 @@
+from rainbow.components.pop_up.pop_up_design_1 import pop_up_design_1
+from rainbow.components.pop_up.pop_up_design_2 import pop_up_design_2
+from rainbow.components.pop_up.pop_up_design_3 import pop_up_design_3

@@ -1,0 +1,17 @@
+# Ignore Python environment files
+.venv/
+__pycache__/
+*.pyc
+*.py[cod]
+
+# Reflex generated files
+.states
+.web
+assets/external/
+*.db
+
+# VSCode settings (optional, but common)
+.vscode/
+
+# macOS system files
+.DS_Store

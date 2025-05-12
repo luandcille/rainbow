@@ -1,0 +1,25 @@
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* styles/style.css */
+  .rainbow-border {
+    border: 5px solid transparent; /* Ajustez la largeur de la bordure si nécessaire */
+    border-image: linear-gradient(
+      90deg,
+      rgb(250, 183, 96), 
+      rgb(250, 227, 96),
+      rgb(105, 255, 143),
+      rgb(108, 226, 255),
+      rgb(234, 159, 255),
+      rgb(255, 165, 199),
+      rgb(252, 118, 118)
+    ) 1;
+    border-radius: 15px; /* Coins arrondis (facultatif) */
+    padding: 20px; /* Espace intérieur */
+  }
+  
+  .font-didact {
+    font-family: 'Didact Gothic', sans-serif;
+  }
