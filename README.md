@@ -1,7 +1,6 @@
 # 🌈 Rainbow — My Creative Playground
 
-A personal portfolio to share what I love building from design sketches to dev experiments and digital products made with heart.  
-Built entirely with [Reflex](https://reflex.dev), styled by instinct, and crafted for curiosity.
+A personal portfolio to share what I love building from design sketches to dev experiments and digital products made with heart. Built entirely with [Reflex](https://reflex.dev), styled by instinct, and crafted for curiosity.
 
 ---
 
