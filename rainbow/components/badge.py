@@ -15,7 +15,7 @@ from rainbow.state.badge_state import BadgeState
 # from rainbow.components.hint import hint
 
 
-# --- 🏷️ Reflex Badge (Created my own badge) ---
+# --- 🏷️ Reflex Badge (Created my own) ---
 def badge() -> rx.Component:
     return rx.el.div(
         rx.link(
