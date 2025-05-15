@@ -33,6 +33,13 @@ def index() -> rx.Component:
         header(),
         portfolio_section(),
         footer(),
+        rx.el.style( 
+            """
+            a[href="https://reflex.dev"] {
+                display: none !important;
+            }
+            """
+        ),
         badge(),
         class_name="rainbow-border font-didact",
         style={
