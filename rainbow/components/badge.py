@@ -10,9 +10,9 @@
 import reflex as rx
 
 # 🧩 Components
-from rainbow.components.icons import get_icon
-from rainbow.state.badge_state import BadgeState
+# from rainbow.state.badge_state import BadgeState
 # from rainbow.components.hint import hint
+# from rainbow.components.icons import get_icon
 
 
 # --- 🏷️ Reflex Badge (Created my own) ---
@@ -20,35 +20,70 @@ def badge() -> rx.Component:
     return rx.el.div(
         rx.link(
             rx.el.div(
-            rx.el.img(
-                src="/images/reflex_logo.jpg",
-                class_name="h-3 w-3 sm:h-4 sm:w-4 rounded-sm object-contain",
-            ),
-
+                rx.el.img(
+                    src="/images/reflex_logo.jpg",
+                    class_name="h-3 w-3 sm:h-4 sm:w-4 rounded-sm object-contain",
+                ),
                 rx.el.span(
                     "Built with Reflex",
-                    class_name="ml-[4px] sm:ml-[6px] font-semibold text-xs sm:text-sm whitespace-nowrap",
+                    class_name="ml-2 font-semibold text-xs sm:text-sm whitespace-nowrap",
                 ),
-                class_name=rx.cond(
-                    BadgeState.is_hovered,
-                    rx.color_mode_cond(
-                        light="flex items-center px-2 py-2 sm:pt-1 sm:pb-1 pr-2 sm:pr-2 bg-black text-white border border-black/20 rounded-lg transition-all duration-300 transform hover:scale-105",
-                        dark="flex items-center px-2 py-2 sm:pt-1 sm:pb-1 pr-2 sm:pr-2 bg-white text-black border border-white/20 rounded-lg transition-all duration-300 transform hover:scale-105",
+                class_name=rx.color_mode_cond(
+                    # Inverse des couleurs habituelles
+                    light=(
+                        "flex items-center px-2 py-1 sm:py-1.5 pr-2 "
+                        "bg-black text-white border border-black/20 "
+                        "rounded-lg transition-all duration-300 transform hover:scale-105"
                     ),
-                    rx.color_mode_cond(
-                        light="flex items-center px-2 py-2 sm:pt-1 sm:pb-1 pr-2 sm:pr-2 bg-white/80 text-black border border-black/10 rounded-lg transition-all duration-300 backdrop-blur",
-                        dark="flex items-center px-2 py-2 sm:pt-1 sm:pb-1 pr-2 sm:pr-2 bg-white/5 text-white border border-white/10 rounded-lg transition-all duration-300 backdrop-blur",
+                    dark=(
+                        "flex items-center px-2 py-1 sm:py-1.5 pr-2 "
+                        "bg-white text-black border border-white/20 "
+                        "rounded-lg transition-all duration-300 transform hover:scale-105"
                     ),
                 ),
-                on_mouse_enter=BadgeState.handle_mouse_enter,
-                on_mouse_leave=BadgeState.handle_mouse_leave,
             ),
             href="https://github.com/reflex-dev/reflex-web",
             is_external=True,
             class_name="no-underline",
         ),
-        class_name="fixed bottom-4 right-4 z-50",  # Bottom right corner
+        class_name="fixed bottom-4 right-4 z-50",
     )
+
+
+
+# def badge() -> rx.Component:
+#     return rx.el.div(
+#         rx.link(
+#             rx.el.div(
+#             rx.el.img(
+#                 src="/images/reflex_logo.jpg",
+#                 class_name="h-3 w-3 sm:h-4 sm:w-4 rounded-sm object-contain",
+#             ),
+
+#                 rx.el.span(
+#                     "Built with Reflex",
+#                     class_name="ml-[4px] sm:ml-[6px] font-semibold text-xs sm:text-sm whitespace-nowrap",
+#                 ),
+#                 class_name=rx.cond(
+#                     BadgeState.is_hovered,
+#                     rx.color_mode_cond(
+#                         light="flex items-center px-2 py-2 sm:pt-1 sm:pb-1 pr-2 sm:pr-2 bg-black text-white border border-black/20 rounded-lg transition-all duration-300 transform hover:scale-105",
+#                         dark="flex items-center px-2 py-2 sm:pt-1 sm:pb-1 pr-2 sm:pr-2 bg-white text-black border border-white/20 rounded-lg transition-all duration-300 transform hover:scale-105",
+#                     ),
+#                     rx.color_mode_cond(
+#                         light="flex items-center px-2 py-2 sm:pt-1 sm:pb-1 pr-2 sm:pr-2 bg-white/80 text-black border border-black/10 rounded-lg transition-all duration-300 backdrop-blur",
+#                         dark="flex items-center px-2 py-2 sm:pt-1 sm:pb-1 pr-2 sm:pr-2 bg-white/5 text-white border border-white/10 rounded-lg transition-all duration-300 backdrop-blur",
+#                     ),
+#                 ),
+#                 on_mouse_enter=BadgeState.handle_mouse_enter,
+#                 on_mouse_leave=BadgeState.handle_mouse_leave,
+#             ),
+#             href="https://github.com/reflex-dev/reflex-web",
+#             is_external=True,
+#             class_name="no-underline",
+#         ),
+#         class_name="fixed bottom-4 right-4 z-50",  # Bottom right corner
+#     )
 
 
 
