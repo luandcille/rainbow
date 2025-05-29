@@ -28,6 +28,10 @@ def footer() -> rx.Component:
             # Social Buttons
             rx.flex(
                 primary_button(
+                    button_text="shop",
+                    link="https://lucillevigne.bigcartel.com",
+                ),
+                primary_button(
                     button_text="cv.read",
                     link="https://read.cv/lucillevigne",
                 ),
@@ -37,7 +41,7 @@ def footer() -> rx.Component:
                 ),
                 primary_button(
                     button_text="behance",
-                    link="https://www.behance.net/sonolucilla",
+                    link="https://www.behance.net/lucillevigne",
                 ),
                 width="380px",
                 spacing="1",
