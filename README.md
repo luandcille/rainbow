@@ -33,7 +33,7 @@ reflex run
 
 ---
 
-## 📁 Project structure (simplified)
+## 📁 Project structure
 
 ```bash
 rainbow/
