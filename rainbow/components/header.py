@@ -18,7 +18,13 @@ def header() -> rx.Component:
     return rx.section(
         rx.flex(
             # 🌗 Dark/Light toggle
-            rx.color_mode.button(position="top-right"),
+            #rx.color_mode.button(position="top-right"),
+            rx.color_mode.button(
+                position="absolute",
+                top="20px",
+                right="20px",
+                z_index="50",
+            ),
 
             # 👋 Profile image
             rx.image(
@@ -47,7 +53,7 @@ def header() -> rx.Component:
                 padding_bottom="-5px",
             ),
             rx.text(
-                "Product Owner",
+                "Product Manager",
                 size="7",
                 text_align="center",
                 margin_top="-4px",

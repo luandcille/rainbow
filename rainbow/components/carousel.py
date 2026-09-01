@@ -28,11 +28,17 @@ def carousel_component(
             rx.el.div(
                 # ⬅️ Left Arrow
                 rx.el.button(
-                    rx.icon(tag="arrow-left", class_name="w-4 h-4"),
+                    rx.icon(tag="arrow-left", class_name="w-2.5 h-2.5 sm:w-4 sm:h-4"),
                     on_click=lambda: ModalState.prev_image(images),
+                    # class_name=(
+                    #     "absolute -left-10 top-1/2 transform -translate-y-1/2 "
+                    #     "bg-gray-800 text-white p-2 rounded-full opacity-0 group-hover:opacity-80 "
+                    #     "transition-opacity duration-200 z-10"
+                    # ),
                     class_name=(
-                        "absolute -left-10 top-1/2 transform -translate-y-1/2 "
-                        "bg-gray-800 text-white p-2 rounded-full opacity-0 group-hover:opacity-80 "
+                        "absolute -left-6 sm:-left-10 top-1/2 transform -translate-y-1/2 "
+                        "bg-gray-800 text-white p-1 sm:p-2 rounded-full "
+                        "opacity-90 sm:opacity-0 sm:group-hover:opacity-80 "
                         "transition-opacity duration-200 z-10"
                     ),
                     disabled=len(images) <= 1,
@@ -56,11 +62,17 @@ def carousel_component(
                 ),
                 # ➡️ Right Arrow
                 rx.el.button(
-                    rx.icon(tag="arrow-right", class_name="w-4 h-4"),
+                    rx.icon(tag="arrow-right", class_name="w-2.5 h-2.5 sm:w-4 sm:h-4"),
                     on_click=lambda: ModalState.next_image(images),
+                    # class_name=(
+                    #     "absolute -right-10 top-1/2 transform -translate-y-1/2 "
+                    #     "bg-gray-800 text-white p-2 rounded-full opacity-0 group-hover:opacity-80 "
+                    #     "transition-opacity duration-200 z-10"
+                    # ),
                     class_name=(
-                        "absolute -right-10 top-1/2 transform -translate-y-1/2 "
-                        "bg-gray-800 text-white p-2 rounded-full opacity-0 group-hover:opacity-80 "
+                        "absolute -right-6 sm:-right-10 top-1/2 transform -translate-y-1/2 "
+                        "bg-gray-800 text-white p-1 sm:p-2 rounded-full "
+                        "opacity-90 sm:opacity-0 sm:group-hover:opacity-80 "
                         "transition-opacity duration-200 z-10"
                     ),
                     disabled=len(images) <= 1,
@@ -77,9 +89,13 @@ def carousel_component(
                             )
                         ),
                     ),
+                    # class_name=(
+                    #     "absolute bottom-2 left-1/2 transform -translate-x-1/2 "
+                    #     "flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                    # ),
                     class_name=(
-                        "absolute bottom-2 left-1/2 transform -translate-x-1/2 "
-                        "flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                        "absolute bottom-2 left-1/2 transform -translate-x-1/2 flex justify-center "
+                        "opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-200"
                     ),
                 ),
                 class_name="relative w-full group",

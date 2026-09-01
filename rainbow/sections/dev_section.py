@@ -26,7 +26,7 @@ def dev_section_content() -> rx.Component:
                 PortfolioState.dev_projects,
                 lambda project: dev_card(project),
             ),
-            class_name="flex flex-col items-start space-y-8 max-w-md",
+            class_name="flex flex-col items-start space-y-18 max-w-md",
         ),
         class_name="flex flex-col items-center w-full",
     )

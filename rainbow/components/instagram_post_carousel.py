@@ -30,13 +30,20 @@ def instagram_post_carousel(
         rx.el.div(
             # ⬅️ Left arrow
             rx.el.button(
-                rx.icon(tag="arrow-left", class_name="w-4 h-4"),
+                rx.icon(tag="arrow-left", class_name="w-2.5 h-2.5 sm:w-4 sm:h-4"),
                 on_click=lambda: ModalState.prev_instagram_image(image_sources),
+                # class_name=(
+                #     "absolute -left-10 top-1/2 transform -translate-y-1/2 "
+                #     "bg-gray-800 text-white p-2 rounded-full opacity-0 group-hover:opacity-80 "
+                #     "transition-opacity duration-200 z-10"
+                # ),
                 class_name=(
-                    "absolute -left-10 top-1/2 transform -translate-y-1/2 "
-                    "bg-gray-800 text-white p-2 rounded-full opacity-0 group-hover:opacity-80 "
+                    "absolute -left-6 sm:-left-10 top-1/2 transform -translate-y-1/2 "
+                    "bg-gray-800 text-white p-1 sm:p-2 rounded-full "
+                    "opacity-90 sm:opacity-0 sm:group-hover:opacity-80 "
                     "transition-opacity duration-200 z-10"
                 ),
+
                 disabled=len(image_sources) <= 1,
             ),
             # 🖼️ Main image + bullets overlay
@@ -49,17 +56,28 @@ def instagram_post_carousel(
                             rx.image(
                                 src=img,
                                 alt=alt_text,
-                                class_name=f"w-full h-[{image_height}] object-cover rounded-t-lg",
+                                #class_name=f"w-full h-[{image_height}] object-cover rounded-t-lg",
+                                class_name="w-full h-[300px] sm:h-[300px] object-cover rounded-t-lg",
+
+                                
                             ),
                             rx.el.div(
                                 rx.foreach(
                                     list(range(len(image_sources))),
                                     lambda bullet_index: rx.el.span(
+                                        # class_name=rx.cond(
+                                        #     bullet_index == ModalState.instagram_image_index,
+                                        #     "block w-1.5 h-1.5 bg-white rounded-full mx-0.5",
+                                        #     "block w-1.5 h-1.5 bg-gray-300 rounded-full mx-0.5",
+                                        # )
                                         class_name=rx.cond(
                                             bullet_index == ModalState.instagram_image_index,
-                                            "block w-1.5 h-1.5 bg-white rounded-full mx-0.5",
-                                            "block w-1.5 h-1.5 bg-gray-300 rounded-full mx-0.5",
-                                        )
+                                            "block w-2 h-2 sm:w-3 sm:h-3 bg-blue-500 rounded-full mx-1 sm:bg-white",  # actif
+                                            "block w-2 h-2 sm:w-3 sm:h-3 bg-gray-400 rounded-full mx-1 sm:bg-gray-300",  # inactif
+                                        ),
+
+
+
                                     ),
                                 ),
                                 class_name="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex items-center",
@@ -73,13 +91,21 @@ def instagram_post_carousel(
             ),
             # ➡️ Right arrow
             rx.el.button(
-                rx.icon(tag="arrow-right", class_name="w-4 h-4"),
+                rx.icon(tag="arrow-right", class_name="w-2.5 h-2.5 sm:w-4 sm:h-4"),
                 on_click=lambda: ModalState.next_instagram_image(image_sources),
+                # class_name=(
+                #     "absolute -right-10 top-1/2 transform -translate-y-1/2 "
+                #     "bg-gray-800 text-white p-2 rounded-full opacity-0 group-hover:opacity-80 "
+                #     "transition-opacity duration-200 z-10"
+                # ),
                 class_name=(
-                    "absolute -right-10 top-1/2 transform -translate-y-1/2 "
-                    "bg-gray-800 text-white p-2 rounded-full opacity-0 group-hover:opacity-80 "
+                    "absolute -right-6 sm:-right-10 top-1/2 transform -translate-y-1/2 "
+                    "bg-gray-800 text-white p-1 sm:p-2 rounded-full "
+                    "opacity-90 sm:opacity-0 sm:group-hover:opacity-80 "
                     "transition-opacity duration-200 z-10"
                 ),
+
+
                 disabled=len(image_sources) <= 1,
             ),
             class_name="relative w-full group",
@@ -115,5 +141,7 @@ def instagram_post_carousel(
             class_name="p-3",
         ),
         class_name="bg-white shadow-md rounded-lg mb-10 mx-auto",
-        style={"width": post_width},
+        # style={"width": post_width},
+        style={"width": "100%", "maxWidth": "280px"}, # change size of the whole carousel
+
     )

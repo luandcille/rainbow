@@ -10,13 +10,15 @@
 import reflex as rx
 
 # 🧠 App State
-from rainbow.state.portfolio_state import DesignDevProject
+from rainbow.state.portfolio_state import DesignDevProject, MusicProject
+
 from rainbow.state.modal_state import ModalState
 
 # --- 📅 Product Card (for static products or links) ---
 import reflex as rx
 
 
+# --- 🚀 Product Card (for products with images and tags) ---
 def project_container(
     logo_src: str = "/images/default.png",
     title: str = "Default Title",
@@ -98,12 +100,12 @@ def project_container(
                 size="4",
                 font_family="Didact Gothic",
                 weight="regular",
-                margin_top="3px"
+                # margin_top="3px"
             ),
 
             width="400px",
         ),
-        padding_top="10px",
+        # padding_top="10px",
     )
 
 
@@ -185,8 +187,8 @@ def dev_card(project: DesignDevProject) -> rx.Component:
                 "transition-shadow duration-200"
             ),
         ),
-        padding_top="26px",
-        padding_bottom="50px",
+        # padding_top="26px",
+        # padding_bottom="50px",
     )
 
 
@@ -225,13 +227,15 @@ def design_card(project: DesignDevProject) -> rx.Component:
                                 font_family="Didact Gothic",
                                 weight="regular",
                                 margin_bottom="0px",
+                                class_name="text-lg sm:text-xl md:text-2xl lg:text-3xl font-regular",
                             ),
                             rx.icon(
                                 tag="arrow_right",
-                                size=24,
-                                class_name="ml-2 mt-1 transition-transform duration-200 ease-in-out group-hover:translate-x-1",
+                                size=16,
+                                class_name="mt-1 transition-transform duration-200 ease-in-out group-hover:translate-x-1",
+                                
                             ),
-                            class_name="flex items-center space-x-2",
+                            class_name="flex items-center space-x-1 ",
                         ),
                         on_click=ModalState.open_modal(project["id"]),
                         cursor="pointer",
@@ -267,8 +271,182 @@ def design_card(project: DesignDevProject) -> rx.Component:
 
             class_name="group flex flex-col w-full max-w-sm",
         ),
-        padding_top="26px",
-        padding_bottom="50px",
+        # padding_top="26px",
+        # padding_bottom="50px",
     )
 
 
+def music_card(project: MusicProject) -> rx.Component:
+    return rx.flex(
+        rx.el.div(
+            # --- Image wrapper ---
+            rx.box(
+                rx.el.img(
+                    src=project["image_url"],
+                    alt=project["title"],
+                    class_name=(
+                        "w-full h-64 object-cover transition-transform duration-300 "
+                        "ease-in-out group-hover:scale-105"
+                    ),
+                ),
+                on_click=ModalState.open_modal(project["id"]),
+                cursor="pointer",
+                class_name=(
+                    "w-full h-64 rounded-lg border border-gray-200 overflow-hidden "
+                    "hover:shadow-lg transition-shadow duration-200"
+                ),
+            ),
+
+            # --- Title + arrow + icon buttons aligned like tags ---
+            rx.el.div(
+                rx.flex(
+                    # Title + arrow
+                    rx.box(
+                        rx.flex(
+                            rx.heading(
+                                project["title"],
+                                size="7",
+                                text_align="left",
+                                font_family="Didact Gothic",
+                                weight="regular",
+                                class_name="text-lg sm:text-xl md:text-2xl lg:text-3xl",
+                            ),
+                            rx.icon(
+                                tag="arrow_right",
+                                size=16,
+                                class_name="mt-1 transition-transform duration-200 ease-in-out group-hover:translate-x-1",
+                            ),
+                            class_name="flex items-center space-x-1",
+                        ),
+                        on_click=ModalState.open_modal(project["id"]),
+                        cursor="pointer",
+                        _hover={"opacity": "0.9"},
+                        class_name="group",
+                    ),
+
+                    # Icon buttons (like tags, aligned to the right)
+                    rx.flex(
+                        rx.cond(
+                            project["spotify_link"],
+                            rx.link(
+                                rx.icon(tag="music", size=18, class_name="text-black"),
+                                href=project["spotify_link"],
+                                is_external=True,
+                                class_name=(
+                                    "w-9 h-9 flex items-center justify-center rounded-full "
+                                    "bg-white border border-gray-300 shadow-sm hover:shadow-md "
+                                    "transition-transform duration-200 hover:scale-110"
+                                ),
+                            ),
+                        ),
+                        rx.cond(
+                            project["apple_link"],
+                            rx.link(
+                                rx.icon(tag="apple", size=18, class_name="text-black"),
+                                href=project["apple_link"],
+                                is_external=True,
+                                class_name=(
+                                    "w-9 h-9 flex items-center justify-center rounded-full "
+                                    "bg-white border border-gray-300 shadow-sm hover:shadow-md "
+                                    "transition-transform duration-200 hover:scale-110"
+                                ),
+                            ),
+                        ),
+                        # spacing="1",
+                        margin_left="auto",
+                        class_name="flex items-center space-x-2",
+                    ),
+                    class_name="flex w-full items-center",
+                ),
+                class_name="flex flex-col items-start justify-start mt-2",
+            ),
+
+            class_name="group flex flex-col w-full max-w-sm",
+        )
+    )
+
+
+
+
+# # --- 🎵 Music Card (triggers modal on click) ---
+# def music_card(project: DesignDevProject) -> rx.Component:
+#     return rx.flex(
+#         rx.el.div(
+#             # --- Image wrapper with shadow, border, and rounded corners ---
+#             rx.box(
+#                 rx.el.img(
+#                     src=project["image_url"],
+#                     alt=f"{project['title']} preview",
+#                     class_name=(
+#                         "w-full h-64 object-cover transition-transform duration-300 "
+#                         "ease-in-out group-hover:scale-105"
+#                     ),
+#                 ),
+#                 on_click=ModalState.open_modal(project["id"]),
+#                 cursor="pointer",
+#                 class_name=(
+#                     "w-full h-64 rounded-lg border border-gray-200 overflow-hidden "
+#                     "hover:shadow-lg dark:hover:shadow-[0_4px_6px_rgba(0,0,0,0.1),_0_4px_14px_rgba(255,255,255,0.1)] "
+#                     "transition-shadow duration-200"
+#                 ),
+#             ),
+
+#             # --- Title and Tags ---
+#             rx.el.div(
+#                 rx.flex(
+#                     rx.box(
+#                         rx.flex(
+#                             rx.heading(
+#                                 project["title"],
+#                                 size="7",
+#                                 text_align="left",
+#                                 font_family="Didact Gothic",
+#                                 weight="regular",
+#                                 margin_bottom="0px",
+#                                 class_name="text-lg sm:text-xl md:text-2xl lg:text-3xl font-regular",
+#                             ),
+#                             rx.icon(
+#                                 tag="arrow_right",
+#                                 size=16,
+#                                 class_name="ml-2 mt-1 transition-transform duration-200 ease-in-out group-hover:translate-x-1",
+                                
+#                             ),
+#                             class_name="flex items-center space-x-2 ",
+#                         ),
+#                         on_click=ModalState.open_modal(project["id"]),
+#                         cursor="pointer",
+#                         _hover={"opacity": "0.9"},
+#                         class_name="group",
+#                     ),
+#                     rx.flex(
+#                         rx.foreach(
+#                             project["tags"].to(list[str]),
+#                             lambda tag: rx.button(
+#                                 tag,
+#                                 font_family="Didact Gothic",
+#                                 font_weight="600",
+#                                 radius="full",
+#                                 color="black",
+#                                 background_color="white",
+#                                 border="1px solid #000000",
+#                                 size="1",
+#                                 padding_left="10px",
+#                                 padding_right="10px",
+#                                 margin_top="5px",
+#                                 margin_bottom="5px",
+#                             ),
+#                         ),
+#                         spacing="1",
+#                         margin_left="auto",
+#                         class_name="flex items-center",
+#                     ),
+#                     class_name="flex w-full items-center",
+#                 ),
+#                 class_name="flex flex-col items-start justify-start mt-1",
+#             ),
+
+#             class_name="group flex flex-col w-full max-w-sm",
+#         ),
+#         # padding_top="26px",
+#         # padding_bottom="50px",
+#     )

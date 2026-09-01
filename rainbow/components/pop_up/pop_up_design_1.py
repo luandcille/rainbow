@@ -61,7 +61,9 @@ def pop_up_design_1() -> rx.Component:
                                 rx.image(
                                     src=content["image1"],
                                     alt=content["image1_alt"],
-                                    class_name="rounded-lg shadow-lg w-[450px] h-[200px] object-cover mx-auto",
+                                    #class_name="rounded-lg shadow-lg w-[450px] h-[200px] object-cover mx-auto",
+                                    class_name="rounded-lg shadow-lg w-full sm:w-[450px] h-auto object-cover mx-auto",
+
                                 ),
                                 class_name="w-full mb-10",
                             ),
@@ -81,6 +83,7 @@ def pop_up_design_1() -> rx.Component:
                                 class_name="w-full mb-8",
                             ),
                             class_name="mb-10 w-9/12",
+                            
                         ),
 
                         # ⭐ Highlight 1
@@ -132,13 +135,17 @@ def pop_up_design_1() -> rx.Component:
                             class_name="mb-10 w-9/12",
                         ),
 
-                        class_name="px-16 w-full flex flex-col items-center",
+                        #class_name="px-16 w-full flex flex-col items-center",
+                        class_name="px-4 sm:px-16 w-full flex flex-col items-center",
+
                     ),
                     scrollbars="vertical",
                     type="hover",
                     class_name="w-full h-full",
                 ),
                 class_name="relative bg-white rounded-3xl shadow-xl max-w-xl w-full max-h-[80vh] overflow-hidden flex flex-col",
+               
+
             ),
             class_name="fixed inset-0 flex items-center justify-center p-4 z-50 bg-black bg-opacity-75",
         ),

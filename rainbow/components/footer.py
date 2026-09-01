@@ -27,14 +27,10 @@ def footer() -> rx.Component:
 
             # Social Buttons
             rx.flex(
-                primary_button(
-                    button_text="shop",
-                    link="https://lucillevigne.bigcartel.com",
-                ),
-                primary_button(
-                    button_text="cv.read",
-                    link="https://read.cv/lucillevigne",
-                ),
+                # primary_button(
+                #     button_text="cv.read",
+                #     link="https://read.cv/lucillevigne",
+                # ),
                 primary_button(
                     button_text="linkedin",
                     link="https://www.linkedin.com/in/lucillevigne",
@@ -42,6 +38,14 @@ def footer() -> rx.Component:
                 primary_button(
                     button_text="behance",
                     link="https://www.behance.net/lucillevigne",
+                ),
+                primary_button(
+                    button_text="github",
+                    link="https://github.com/luandcille",
+                ),
+                primary_button(
+                    button_text="etsy",
+                    link="https://www.etsy.com/shop/SonoLucillaStudio",
                 ),
                 width="380px",
                 spacing="1",
@@ -58,14 +62,14 @@ def footer() -> rx.Component:
                     margin_bottom="5px",
                 ),
                 rx.text(
-                    "Coded by Lucille Vigné",
-                    size="2",
+                    "Coded in 🐍 by Lucille Vigné",
+                    size="3",
                     font_family="Didact Gothic",
                     weight="regular",
                 ),
                 rx.text(
-                    "with rbnws 🌈",
-                    size="2",
+                    "with rnbws 🌈",
+                    size="3",
                     font_family="Didact Gothic",
                     weight="regular",
                 ),

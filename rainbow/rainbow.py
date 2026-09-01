@@ -58,6 +58,6 @@ app = rx.App(
         "https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap",
     ],
 )
-app.add_page(index)
+# app.add_page(index)
 
 

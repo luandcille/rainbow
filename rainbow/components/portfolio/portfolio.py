@@ -17,6 +17,7 @@ from rainbow.state.modal_state import ModalState
 from rainbow.sections.product_section import product_section_content
 from rainbow.sections.dev_section import dev_section_content
 from rainbow.sections.design_section import design_section_content
+from rainbow.sections.music_section import music_section_content
 
 # 🧩 UI Components
 from rainbow.components.pop_up.pop_up import pop_up
@@ -57,6 +58,7 @@ def portfolio_section() -> rx.Component:
                 section_button("Product", "Product"),
                 section_button("Code", "Code"),
                 section_button("Design", "Design"),
+                section_button("Music", "Music"),
                 pop_up(),
                 class_name="flex justify-center space-x-4 sm:space-x-8 mb-12 items-baseline",
             ),
@@ -68,6 +70,7 @@ def portfolio_section() -> rx.Component:
                     ("Product", product_section_content()),
                     ("Code", dev_section_content()),
                     ("Design", design_section_content()),
+                    ("Music", music_section_content()),
                     rx.el.p("Select a section."),  # Fallback
                 ),
                 class_name="w-full flex justify-center",

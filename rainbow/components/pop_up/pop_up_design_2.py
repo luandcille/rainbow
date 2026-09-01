@@ -148,7 +148,10 @@ def pop_up_design_2() -> rx.Component:
                             class_name="mb-10 w-9/12",
                         ),
 
-                        class_name="px-16 w-full flex flex-col items-center",
+                        #class_name="px-16 w-full flex flex-col items-center",
+                        class_name="px-4 sm:px-16 w-full flex flex-col items-center",
+
+                        
                     ),
                     scrollbars="vertical",
                     type="hover",

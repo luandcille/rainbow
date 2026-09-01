@@ -6,7 +6,7 @@
 
 
 # --- 💻 Dev Section Title ---
-dev_section_title = "powerful scripts striking back, beautifully, far, far away"
+dev_section_title = "beautiful scripts striking back, far, far away"
 
 
 # --- 🛠️ Dev Projects List ---
@@ -23,11 +23,11 @@ dev_projects = [
             "Auth",
             "Stripe",
         ],
-        "link": "https://pyther.in",
+        "link": "https://pytherin-cyan-ring.reflex.run/",
     },
     {
         "title": "portfolio",
-        "description": "A crafted showcase of product design, development, and creative direction. Explore the projects that shaped my journey from founder to product owner",
+        "description": "A crafted showcase of product design, development and creative direction. Explore projects that shaped my journey from founder to product owner",
         "date_range": "Nov 2024 - Present",
         "image_url": "/images/web.png",
         "tags": [

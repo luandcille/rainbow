@@ -53,7 +53,7 @@ class ModalState(rx.State):
         if len(images) > 1:
             self.instagram_image_index = (self.instagram_image_index - 1 + len(images)) % len(images)
 
-
+    
 
 # import reflex as rx
 # from typing import Dict, List

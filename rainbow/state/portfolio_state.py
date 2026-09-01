@@ -11,6 +11,7 @@ from typing import TypedDict, List
 
 from rainbow.data.dev_card import dev_projects 
 from rainbow.data.design_card import design_projects
+from rainbow.data.music_card import music_projects
 
 
 # --- 📊 Data Types ---
@@ -23,6 +24,18 @@ class DesignDevProject(TypedDict):
     tags: List[str]
     link: str
 
+class MusicProject(TypedDict, total=False):
+    id: str
+    title: str
+    description: str
+    date_range: str
+    image_url: str
+    tags: List[str]
+    link: str
+    spotify_link: str
+    apple_link: str
+    youtube_link: str
+
 
 # --- 🧩 Portfolio State ---
 class PortfolioState(rx.State):
@@ -31,6 +44,7 @@ class PortfolioState(rx.State):
     current_section: str = "Product"
     dev_projects: List[DesignDevProject] = dev_projects
     design_projects: List[DesignDevProject] = design_projects
+    music_projects: List[MusicProject] = music_projects
 
     @rx.event
     def set_section(self, section: str):
